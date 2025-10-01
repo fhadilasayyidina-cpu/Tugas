@@ -1,0 +1,70 @@
+body {
+    background-color: #ffe6f2; /* pink muda */
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #d63384; /* pink Bootstrap */
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+p, li, td, th {
+    color: #4a4a4a;
+    font-size: 16px;
+}
+
+table {
+    background-color: #fff;
+    border: 2px solid #d63384;
+}
+
+th {
+    background-color: #f8bbd0;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: 3px solid #d63384;
+}
+
+body {
+  background-color: #fff0f6; /* pink muda */
+  font-family: Arial, sans-serif;
+}
+
+.text-pink {
+  color: #d63384;
+}
+
+.bg-pink {
+  background-color: #d63384 !important;
+}
+
+.border-pink {
+  border-color: #d63384 !important;
+}
+
+.btn-pink {
+  background-color: #d63384;
+  border: none;
+  color: #fff;
+}
+
+.btn-pink:hover {
+  background-color: #ad2569;
+  color: #fff;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+.table-pink {
+  background-color: #f8bbd0;
+  color: #000;
+}

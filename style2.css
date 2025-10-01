@@ -1,0 +1,26 @@
+body {
+  background-color: #ffe6f2; /* pink muda */
+}
+
+.text-pink {
+  color: #d63384; /* pink Bootstrap */
+}
+
+.btn-pink {
+  background-color: #d63384;
+  border: none;
+  color: #fff;
+}
+
+.btn-pink:hover {
+  background-color: #ad2569;
+  color: #fff;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+.form-control, .form-select, .form-check-input {
+  border-radius: 10px;
+}

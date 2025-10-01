@@ -1,38 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belajar Membuat Form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buku Tamu</title>
+  <!-- Bootstrap Lokal -->
+  <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <!-- CSS Custom -->
+  <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-    <h2>Form Buku Tamu</h2>
-    <form>
-        Nama Lengkap : <br>
-        <input type="text" name="nama_lengkap" size="40"><br><br>
-        Jenis Kelamin : <br>
-        <input type="radio" name="jenis_kelamin" value="L" checked> Laki-Laki
-        <input type="radio" name="jenis_kelamin" value="P"> Perempuan<br><br>
-        Alamat Tinggal : <br>
-        <input type="text" name="alamat" size="40"><br><br>
-        Email : <br>
-        <input type="email" name="email" size="40" required><br><br>
-        Aktif pada sosial media : <br>
-        <input type="checkbox" name="facebook" value="Ya" checked> facebook
-        <input type="checkbox" name="twitter" value="Ya"> twitter
-        <input type="checkbox" name="instagram" value="Ya"> instagram
-        <input type="checkbox" name="path" value="Ya"> path <br><br>
-        Mengetahui website ini dari : <br>
-        <select name="info">
-            <option selected>- = Pilih = -</option>
-            <option value="web">Web</option>
-            <option value="surat kabar">Surat kabar</option>
-            <option value="teman kerabat">Teman Kerabat</option>
-            <option value="browsing internet">Browsing Internet</option>
-        </select><br><br>
-        Pesan: <br>
-        <textarea name="pesan" cols="40"></textarea> <br><br>
-        <input type="submit" value="kirim">
-    </form>
+
+  
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="bg-light p-2 rounded mb-3">
+    <ol class="breadcrumb mb-0">
+      <li class="breadcrumb-item"><a href="index1.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="artikel.html">Artikel</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Buku Tamu</li>
+    </ol>
+  </nav>
+
+
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow-lg border-0">
+          <div class="card-body p-5">
+
+            <h2 class="text-center text-pink mb-4">Form Buku Tamu</h2>
+            
+            <form>
+              
+              <div class="row mb-3">
+                <div class="col">
+                  <label for="firstName" class="form-label">Nama Depan</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="First name">
+                </div>
+                <div class="col">
+                  <label for="lastName" class="form-label">Nama Belakang</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="Last name">
+                </div>
+              </div>
+
+             
+              <div class="mb-3">
+                <label class="form-label">Jenis Kelamin</label><br>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="jenis_kelamin" id="laki" value="L" checked>
+                  <label class="form-check-label" for="laki">Laki-Laki</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="jenis_kelamin" id="perempuan" value="P">
+                  <label class="form-check-label" for="perempuan">Perempuan</label>
+                </div>
+              </div>
+
+              
+              <div class="mb-3">
+                <label for="inputAddress" class="form-label">Alamat Tinggal</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="Jl. Syech Yusuf">
+              </div>
+
+          
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+              </div>
+
+          
+              <div class="mb-3">
+                <label class="form-label">Aktif pada Sosial Media</label><br>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="facebook" value="facebook" checked>
+                  <label class="form-check-label" for="facebook">Facebook</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="twitter" value="twitter">
+                  <label class="form-check-label" for="twitter">Twitter</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="instagram" value="instagram">
+                  <label class="form-check-label" for="instagram">Instagram</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="path" value="path">
+                  <label class="form-check-label" for="path">Path</label>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="source" class="form-label">Mengetahui Website Ini Dari</label>
+                <select class="form-select" id="source">
+                  <option selected>- = Pilih = -</option>
+                  <option value="web">Web</option>
+                  <option value="surat kabar">Surat Kabar</option>
+                  <option value="teman">Teman / Kerabat</option>
+                  <option value="browsing">Browsing Internet</option>
+                </select>
+              </div>
+
+              <!-- Pesan -->
+              <div class="mb-3">
+                <label for="pesan" class="form-label">Pesan</label>
+                <textarea class="form-control" id="pesan" rows="4" placeholder="Tulis pesan Anda..."></textarea>
+              </div>
+
+              <!-- Tombol Submit -->
+              <button type="submit" class="btn btn-pink w-100">Kirim</button>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Lokal -->
+  <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
